@@ -1,6 +1,6 @@
 const connection = require('../database/connections');
 const generateUniqueId = require('../utils/generateUniqueId');
-//const crypto = require('crypto');
+
 
 module.exports = {
   async index(request, response) {
@@ -23,7 +23,6 @@ module.exports = {
       uf
     });
 
-    //console.log(name, email, whatsapp, city, uf);
 
     return response.json({ id });
   }

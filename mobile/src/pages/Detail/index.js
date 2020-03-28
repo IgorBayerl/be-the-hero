@@ -1,7 +1,7 @@
 import React from 'react';
 import { Feather } from '@expo/vector-icons';
 import { useNavigation, useRoute } from '@react-navigation/native';
-import { View, Text, Image, Linking, TouchableOpacity } from 'react-native';
+import { View, Text, FlatList, Image, Linking, TouchableOpacity } from 'react-native';
 import * as MailComposer from 'expo-mail-composer';
 
 import logoImg from '../../assets/logo.png';
@@ -46,12 +46,16 @@ export default function Detail() {
                 </TouchableOpacity>
             </View>
 
+
             <View style={styles.incident}>
                 <Text style={[styles.incidentProperty, { marginTop: 0 }]}>ONG:</Text>
                 <Text style={styles.incidentValue}>{incident.name} de {incident.city}/{incident.uf}</Text>
 
                 <Text style={styles.incidentProperty}>CASO:</Text>
                 <Text style={styles.incidentValue}>{incident.title}</Text>
+
+                <Text style={styles.incidentProperty}>DESCRIÇÃO:</Text>
+                <Text style={styles.incidentValue}>{incident.description}</Text>
 
                 <Text style={styles.incidentProperty}>Valor:</Text>
                 <Text style={styles.incidentValue}>
@@ -62,9 +66,21 @@ export default function Detail() {
                 </Text>
             </View>
 
+
+            {/* <View >
+                <FlatList
+                    data={[1,2]}
+                    renderItem={() => (
+                        <Text >DESCRIÇÃO:</Text>,
+                        <Text >{incident.description}</Text>
+                    )}
+                />
+
+            </View> */}
+
             <View style={styles.contactBox}>
                 <Text style={styles.heroTitle}>Salve o dia!</Text>
-                <Text style={styles.heroTitle}>Seja o herio desse caso.</Text>
+                <Text style={styles.heroTitle}>Seja o herói desse caso.</Text>
 
                 <Text style={styles.heroDescription}>Entre em contato</Text>
                 <View style={styles.actions}>
