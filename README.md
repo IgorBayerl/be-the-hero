@@ -7,6 +7,9 @@ Resultado de uma semana onde foi desenvolvida uma aplicação chamada BE THE HER
 - FRONT-END (WEB - ReactJS e MOBO - React Native).
 - BACKEND (Nodejs).
 
+### Video do projeto concluído e funcionando.
+- https://youtu.be/eQUQxUHKagU
+
 ### Configurar ambiente de desenvolvimento
 - Node.js & NPM
 - Visual Studio Code
